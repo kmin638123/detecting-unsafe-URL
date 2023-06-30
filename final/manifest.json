@@ -1,0 +1,33 @@
+{
+  "name": "Phishing Detection",
+  "description": "Phishing URL or website detection",
+  "version": "1.16",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"    
+  },
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "http://*/*", "https://*/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/icon16.png",
+      "32": "/images/icon32.png",
+      "48": "/images/icon48.png",
+      "128": "/images/icon128.png"
+    }
+  },
+  "content_scripts": [{
+        "matches": ["https://*/*","http://*/*"],
+        "js": ["popup.js","background.js","jquery-3.1.1.min.js"],
+        "run_at": "document_end"
+    }],
+  "icons": {
+    "16": "/images/icon16.png",
+    "32": "/images/icon32.png",
+    "48": "/images/icon48.png",
+    "128": "/images/icon128.png"
+  }
+}

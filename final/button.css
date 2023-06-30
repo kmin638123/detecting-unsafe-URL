@@ -1,0 +1,12 @@
+button {
+  height: none;
+  width: none;
+  outline: none;
+  margin: none;
+  border: none;
+  border-radius: none;
+}
+
+button.current {
+  box-shadow: none;
+}

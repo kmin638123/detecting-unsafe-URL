@@ -1,0 +1,106 @@
+.switch-button{ 
+    position: relative; display: inline-block; width: 30px; height: 50px; 
+} 
+.switch-button input{ 
+    opacity: 0; width: 0; height: 0; 
+} 
+.onoff-switch{ 
+    position: absolute; cursor: pointer; top: 0; left: 0; right: 0; bottom: 0; border-radius:40px; 
+    background-color: #ccc; box-shadow: inset 1px 5px 1px #999999; -webkit-transition: .4s; transition: .4s; 
+} 
+.onoff-switch:before{ 
+    position: absolute; content: ""; height: 15px; width: 15px; top:4px;left:1.5px; background-color: #fff; 
+    border: 1px solid #D4D4D4;
+    -webkit-transition: .5s; transition: .4s; border-radius:20px; 
+} 
+.switch-button input:checked + .onoff-switch{ 
+    background-color: #1F99D3; box-shadow: inset 1px 5px 1px #156F9A; 
+} 
+.switch-button input:checked + .onoff-switch:before{ 
+    -webkit-transform: translateY(26px); -ms-transform: translateY(26px); transform: translateY(26px); 
+}
+
+.styled {
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+    width:33px;
+    height:33px;
+    border: 0;
+    font-size: 0.8rem;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 50%;
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -1px -1px 2px rgba(0, 0, 0, .6);
+}
+
+#low{
+    position:absolute;
+    left:41px;
+    top:65px;
+    background-color: #56A008;
+}
+
+#mid{
+    position:absolute;
+    left:88px;
+    top:65px;
+    background-color: #F58801;
+}
+
+#low.styled:hover{
+    background-color: #74B133;
+}
+#mid.styled:hover{
+    background-color: #FFAA41;
+}
+
+#high{
+    position:absolute;
+    left:134px;
+    top:65px;
+    background-color: #FF0505;
+}
+
+#high.styled:hover{
+    background-color:#FF5151
+}
+
+.styled:hover {
+    cursor: pointer;
+}
+
+.styled:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+.level{
+    font-family: 'Roboto', sans-serif;
+    font-weight:400;
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-weight:500;
+}
+
+ /* switch */
+ input[type=checkbox].switch {
+    cursor: pointer;
+    width: 1.5em;
+    height: 3.5em;
+ }
+ 
+ /* option text */
+ .opt-1 {
+    color: black;
+    font-weight: 600;
+ }
+ .opt-2 {
+    color: gray;
+ }
